@@ -1,0 +1,41 @@
+schema {
+    query: Query
+}
+
+type Query{
+    """You can fetch all gene informations (along with their transcripts and expression profiles) 
+    or fetch for a specific gene based on either gene ID (like 'GeneID1') 
+    or gene name (like 'GeneName1')."""
+    genes(gene_id: ID, gene_name: String): [Gene!]!
+
+    """You can fetch all transcript informations (along with their expression profiles) 
+    or fetch for a specific transcript based on either gene ID (like 'GeneID1') 
+    or transcript ID (like 'TranscriptID2.1')."""
+    transcripts(gene_id: ID, transcript_id: ID): [Transcript!]!
+
+    """You can fetch all expression profiles for a specific transcript 
+    based on a transcript ID (like 'TranscriptID1.2')."""
+    expression_profiles(transcript_id: ID!): [ExpressionProfile!]!
+}
+
+type Gene{
+    """In real-world application, Gene ID could be Ensembl, HGNC, NCBI (Entrez) or UniProt ID. 
+    In this demo case, use 'GeneID1'."""
+    gene_id: ID!
+    gene_name: String!
+    gene_description: String!
+    transcripts: [Transcript!]!
+}
+
+type Transcript{
+    gene_id: ID!
+    transcript_id: ID!
+    length: Int!
+    expression_profiles: [ExpressionProfile!]!
+}
+
+type ExpressionProfile{
+    transcript_id: ID!
+    brain: Float!
+    heart: Float!
+}
