@@ -9,7 +9,7 @@ Here is a basic GraphQL API built for a bioinformatics (genomics) case by empowe
 *An example query for fetching a specific gene and its all transcript-related info*
 
 <details>
-<summary>Are you looking for an daily life analogy instead of "gene", "transcript", "expression_profiles" terms?</summary>
+<summary>Are you looking for an daily life analogy instead of `gene`, `transcript`, `expression_profiles` terms?</summary>
 You could think of an <b>author</b> instead of a <b>gene</b>. So, our authors (genes) might have more than one <b>book (transcript)</b>. Also, each <b>book (transcript)</b> could have more than one version/type and - so, their meta information also change!
 </details>
 
@@ -128,7 +128,7 @@ Find the explanation below for each file in this repo to make it everything crys
 
 ## 🚀 Author and Developer
 - Furkan M. Torun
-- Twitter: [@furkanmtorun](https:/twitter.com/furkanmtorun)
+- Twitter: [@furkanmtorun](https://www.twitter.com/furkanmtorun)
 - Mail: [furkanmtorun[at]gmail[dot]com](mailto:furkanmtorun@gmail.com) 
 - Academia: [Google Scholar Profile](https://scholar.google.com/citations?user=d5ZyOZ4AAAAJ) 
 - Website: [furkanmtorun.github.io](https://furkanmtorun.github.io)
