@@ -3,18 +3,17 @@
 ## 💡 TL;DR: What is this at all?
 Here is a basic GraphQL API built for a bioinformatics (genomics) case by empowering Python & Flask (web microframework) and Ariadne (for GraphQL API) together with the explanatory documentation!
 
+⭐ If you like it, please do not forget to give a star!
+
 ![Screenshot](screenshot.png)
-An example query for fetching a specific gene and its all transcript-related info
+*An example query for fetching a specific gene and its all transcript-related info*
 
 <details>
 <summary>Are you looking for an daily life analogy instead of "gene", "transcript", "expression_profiles" terms?</summary>
 You could think of an <b>author</b> instead of a <b>gene</b>. So, our authors (genes) might have more than one <b>book (transcript)</b>. Also, each <b>book (transcript)</b> could have more than one version/type and - so, their meta information also change!
 </details>
-<br>
 
-⭐ If you like it, please do not forget to give a star!
-
-<br>
+---
 
 ## 💭 What is GraphQL and was I aiming for with this side project?
 
@@ -122,9 +121,8 @@ Find the explanation below for each file in this repo to make it everything crys
 <br>
 
 ## 🎈 What could be added to improve?
-- [ ] Mutations to FILL HERE
-- [ ] Docker maybe?
-- [ ] There are also packages called “Optimizers” that tackle with the high load level use of databases (skipped as it is beyond the scope of this "basic" example case repo)
+- [ ] Mutations, (see [here](https://graphql.org/learn/queries/) for more details)
+- [ ] DB Connection for data fetching rather than storing them directly in `data_fetch.py` (I did so for simplicitiy)
 
 <br>
 
