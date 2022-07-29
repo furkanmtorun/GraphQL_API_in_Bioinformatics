@@ -1,4 +1,4 @@
-# 🧪 Basic GraphQL API for an Example Bioinformatics Case
+# 🧪 Basic GraphQL API for a Bioinformatics Case
 
 ## 💡 TL;DR: What is this at all?
 Here is a basic GraphQL API built for a bioinformatics (genomics) case by empowering Python & Flask (web microframework) and Ariadne (for GraphQL API) together with the explanatory documentation!
