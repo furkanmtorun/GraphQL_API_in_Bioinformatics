@@ -1,4 +1,4 @@
-# 🧪 Basic GraphQL API for an Example Bioinformatics Case
+# 🧪 Basic GraphQL API for a Bioinformatics Case
 
 ## Data Schema
 
