@@ -32,6 +32,27 @@ query {
 }
 ```
 
+### Query all transcripts
+```
+query {
+  transcripts {
+    transcript_id
+    length
+  }
+}
+```
+
+### Query all the transcripts for the gene with the `gene_id` of "GeneID2"
+```
+query {
+  transcripts(gene_id: "GeneID2") {
+    gene_id
+    transcript_id
+    length
+  }
+}
+```
+
 ### Query the all transcripts, their lengths and expression profiles for "GeneName1":
 ```
 query {
@@ -47,17 +68,6 @@ query {
         heart
       }
     }
-  }
-}
-```
-
-### Query all the transcripts for the gene with the `gene_id` of "GeneID2"
-```
-query {
-  transcripts(gene_id: "GeneID2") {
-    gene_id
-    transcript_id
-    length
   }
 }
 ```
