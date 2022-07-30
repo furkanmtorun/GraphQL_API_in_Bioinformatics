@@ -1,4 +1,4 @@
-name: Test Basic Bioinformatics GraphQL API
+name: CI - Basic Bioinformatics GraphQL API
 
 on:
   push:
