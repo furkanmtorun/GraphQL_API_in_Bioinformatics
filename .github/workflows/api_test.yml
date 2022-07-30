@@ -1,4 +1,5 @@
-name: Demo Advanced Workflow
+# Currently, it is not working as somehow the "Connection is refused"
+name: API Test 
 
 on:
   push:
@@ -6,7 +7,7 @@ on:
       - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build_and_run_API:
@@ -42,10 +43,12 @@ jobs:
           pip install flask==2.1.3 ariadne==0.15.1
           python3 main.py &
           sleep 3
+          kill -9 `lsof -i:5000 -t`
+          curl 'http://0.0.0.1:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:5000' --data-binary '{"query":"query {\n  expression_profiles(transcript_id: \"TranscriptID2.1\"){\n    transcript_id\n  }\n}"}' --compressed
 
       - name: Test with pytest
         run: |
           pip install pytest requests
           kill -9 `lsof -i:5000 -t`
-          curl 'http://127.0.0.1:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:5000' --data-binary '{"query":"query {\n  expression_profiles(transcript_id: \"TranscriptID2.1\"){\n    transcript_id\n  }\n}"}' --compressed
+          curl 'http://0.0.0.1:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:5000' --data-binary '{"query":"query {\n  expression_profiles(transcript_id: \"TranscriptID2.1\"){\n    transcript_id\n  }\n}"}' --compressed
           pytest tests/
