@@ -46,5 +46,6 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest requests
-          curl 'http://localhost:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:5000' --data-binary '{"query":"query {\n  expression_profiles(transcript_id: \"TranscriptID2.1\"){\n    transcript_id\n  }\n}"}' --compressed
+          kill -9 `lsof -i:5000 -t`
+          curl 'http://127.0.0.1:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:5000' --data-binary '{"query":"query {\n  expression_profiles(transcript_id: \"TranscriptID2.1\"){\n    transcript_id\n  }\n}"}' --compressed
           pytest tests/
