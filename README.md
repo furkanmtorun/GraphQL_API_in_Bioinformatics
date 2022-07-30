@@ -1,5 +1,9 @@
 # 🧪 Basic GraphQL API for a Bioinformatics Case
 
+[![CI - Basic Bioinformatics GraphQL API](https://github.com/furkanmtorun/GraphQL_API_in_Bioinformatics/actions/workflows/api_test.yml/badge.svg)](https://github.com/furkanmtorun/GraphQL_API_in_Bioinformatics/actions/workflows/api_test.yml)
+![Py Vers](https://img.shields.io/badge/Tested%20with%20Python-3.8%20%7C%203.9%20%7C%203.10-yellow)
+[![license](https://img.shields.io/github/license/furkanmtorun/GraphQL_API_in_Bioinformatics)](LICENSE)
+
 ## 💡 TL;DR: What is this at all?
 Here is a basic GraphQL API built for a bioinformatics (genomics) case by empowering Python & Flask (web microframework) and Ariadne (for GraphQL API) together with the explanatory documentation!
 
