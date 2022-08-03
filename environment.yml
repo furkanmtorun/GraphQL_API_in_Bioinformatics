@@ -1,9 +1,0 @@
-name: GraphQL_API_in_Bioinformatics
-channels:
-  - defaults
-dependencies:
-  - python=3.8
-  - pip=22.1.2
-  - pip:
-      - flask==2.1.3
-      - ariadne==0.15.1

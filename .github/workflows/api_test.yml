@@ -25,10 +25,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # Not the best practice as we already have `environment.yml` but conda installation failed so far
       - name: Install dependencies 
         run: |
-          pip install flask==2.1.3 ariadne==0.15.1 pytest requests
+          pip install -r requirements.txt
 
       - name: Serve the API and Run the tests
         run: |

@@ -1,0 +1,6 @@
+# Project env needs
+flask==2.1.3
+ariadne==0.15.1
+# Dev/Test env needs
+pytest
+requests

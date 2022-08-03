@@ -76,11 +76,8 @@ In this repo, a bioinformatics case met all these criteria! *(For sure, this cou
   - Navigate into the directory:
     - `cd GraphQL_API_in_Bioinformatics`
   
-  - Install the all requirements at once. Here, I prefer to use `conda` as environment manager:
-    - `conda env create -f environment.yml`
-
-  -  Activate the environment:
-     -  `conda activate GraphQL_API_in_Bioinformatics`
+  -  Install the requirements in your environment (recommended):
+     -  `pip install -r requirements.txt`
 
 - **Running**:
 
@@ -117,7 +114,7 @@ Find the explanation below for each file in this repo to make it everything crys
 │   ├── __init__.py     <- Defines Flask app and set DB link
 │   ├── data_fetch.py   <- Stores data (but should be DB connection/querying functions in ideal case)
 │   └── resolvers.py    <- Defines resolvers for the fields
-├── environment.yml     <- Conda environment file to build 
+├── requirements.txt    <- Environment needs to install
 ├── main.py             <- Defines GraphQL endpoints and relate the resolvers into fields 
 └── schema.graphql      <- Data schema to be read & used by GraphQL
 ```
